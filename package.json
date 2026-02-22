@@ -1,0 +1,21 @@
+{
+  "name": "saint-prime",
+  "version": "1.0.0",
+  "description": "Gesture-controlled holographic intelligence system",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  },
+  "keywords": [
+    "gesture",
+    "mediapipe",
+    "holographic",
+    "stark",
+    "jarvis"
+  ],
+  "author": "Jothan Jerry Kato",
+  "license": "MIT"
+}

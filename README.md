@@ -25,3 +25,31 @@ Saint Prime is a gesture-controlled intelligence system inspired by futuristic h
 - Tracking: MediaPipe Hands.
 - Rendering: HTML5 Canvas for drawing, particles, and background effects.
 - Styling: Vanilla CSS with advanced glassmorphism and animation systems.
+
+## Prerequisites
+
+- Node.js installed on your machine.
+- A functional webcam.
+- A modern web browser (Chrome or Edge recommended).
+
+## Setup and Running
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Jothankato05/saint-prime.git
+   cd saint-prime
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the system:
+   ```bash
+   npm start
+   ```
+
+4. Open your browser and navigate to `http://localhost:3000`.
+
+5. Grant camera permissions and wait for the STARK_CORE boot sequence.

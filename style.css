@@ -267,6 +267,7 @@ body {
     font-weight: 900;
     background: linear-gradient(180deg, #fff, var(--cyan));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
