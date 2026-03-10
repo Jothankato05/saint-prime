@@ -15,7 +15,7 @@ let state = {
   handPresent: false,
   mode: 'STANDBY',
   tool: 'draw',
-  color: '#00f5ff',
+  color: '#0ea5e9',
   strokeSize: 4,
   lastHandPos: { x: 0, y: 0 },
   isDrawing: false,
@@ -373,7 +373,7 @@ function particleLoop() {
     p.x += p.vx; p.y += p.vy;
     if (p.x < 0 || p.x > innerWidth) p.vx *= -1;
     if (p.y < 0 || p.y > innerHeight) p.vy *= -1;
-    pCtx.fillStyle = 'rgba(0, 245, 255, 0.1)';
+    pCtx.fillStyle = 'rgba(14, 165, 233, 0.2)';
     pCtx.beginPath(); pCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2); pCtx.fill();
   });
   requestAnimationFrame(particleLoop);
