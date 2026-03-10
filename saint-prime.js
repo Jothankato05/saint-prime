@@ -279,7 +279,7 @@ function mainRenderLoop() {
     dCtx.beginPath();
     dCtx.strokeStyle = path.color;
     dCtx.lineWidth = path.size;
-    dCtx.shadowBlur = 15;
+    dCtx.shadowBlur = 8;
     dCtx.shadowColor = path.color;
 
     const startX = path.points[0].x + (path.driftX || 0);
