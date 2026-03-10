@@ -183,12 +183,15 @@ function processGestures(landmarks) {
   const isPinching = distPinch < CONFIG.PINCH_THRESHOLD;
 
   const isFist = [8, 12, 16, 20].every(i => Math.hypot(landmarks[i].x - landmarks[0].x, landmarks[i].y - landmarks[0].y) < 0.2);
-  const isPalm = [8, 12, 16, 20].every(i => landmarks[i].y < landmarks[i - 2].y);
 
   if (isFist) {
     if (!state.isAnimateActive) triggerAnimation();
     state.mode = 'ANIMATE';
   } else if (isPinching) {
+    if (!state.grabbedWidget && state.lastPinchDist === 0) {
+      checkWidgetGrab({ x: screenX, y: screenY });
+    }
+
     if (state.grabbedWidget) {
       state.mode = 'GRAB';
       moveWidget({ x: screenX, y: screenY });
@@ -256,7 +259,7 @@ function mainRenderLoop() {
 
     // Roaming behavior: move the whole entity
     if (state.isAnimateActive) {
-      if (!path.driftX) {
+      if (path.driftX === undefined) {
         path.driftX = 0; path.driftY = 0;
         path.vx = (Math.random() - 0.5) * 4;
         path.vy = (Math.random() - 0.5) * 4;

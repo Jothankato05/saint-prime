@@ -13,6 +13,9 @@
     --glass-border: rgba(0, 245, 255, 0.15);
     --text: #e0f7ff;
     --text-dim: rgba(224, 247, 255, 0.4);
+    --green: #00ff88;
+    --red: #ff2d55;
+    --radius: 12px;
     --font-main: 'Orbitron', sans-serif;
     --font-body: 'Inter', sans-serif;
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -94,6 +97,7 @@ body {
     letter-spacing: 0.35em;
     background: linear-gradient(90deg, var(--cyan), var(--purple));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: none;
     animation: bootPulse 1.5s ease-in-out infinite alternate;
@@ -557,7 +561,7 @@ body {
     left: 246px;
 }
 
-#widget-canvas-tools {
+#widget-tools {
     top: 260px;
     left: 24px;
 }
